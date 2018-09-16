@@ -6,20 +6,15 @@
 <script>
   var eventCode = document.getElementById("event-code-input");
   var codeSubmit = document.getElementById("event-code-submit");
-  
   eventCode.addEventListener("keyup", function () {
     if (eventCode.value.length < 5) {
       feedback.style.color = "red";
-      feedback.textContent = 'Code is not long enough yet...';
       codeSubmit.disabled = true;
       }
     else if (eventCode.value.length = 5) {
       feedback.style.color = "green";
-      feedback.textContent = 'Code is correct length';
       codeSubmit.disabled = false;
       }
-  });    
-  codeSubmit.addEventListener("click", function () {    
     location.href = '/' + eventCode.value; return false;
 });
 </script>
@@ -31,11 +26,9 @@
   padding: 10px;
   background-color: #BE5F93;
   color: #fff;
-  border-radius: 4px;   
   border: 0;
   letter-spacing: 1px;
   color: #fff;
- }  
 #event-code-input {
   height:48px;
   font-size: 20px;
