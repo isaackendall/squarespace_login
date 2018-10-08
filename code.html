@@ -1,5 +1,5 @@
 <div id="submitCodeWrapper">
-  <input id="event-code-input" type="text" maxlength="5" class="box" autofocus />
+  <input id="event-code-input" type="text" maxlength="20" class="box" autofocus />
   <input id="event-code-submit" class="myButton"  type="submit" value="Submit" disabled="disabled">
   <div id="feedback"></div>
  </div>
@@ -8,14 +8,14 @@
   var codeSubmit = document.getElementById("event-code-submit");
 
   eventCode.addEventListener("keyup", function () {
-    if (eventCode.value.length < 5) {
+    if (eventCode.value.length < 0) {
       feedback.style.color = "red";
-      feedback.textContent = 'ZipCode is not long enough yet...';
+      feedback.textContent = 'Enter your company code';
       codeSubmit.disabled = true;
       }
-    else if (eventCode.value.length = 5) {
+    else if (eventCode.value.length > 0) {
       feedback.style.color = "green";
-      feedback.textContent = 'ZipCode is correct length';
+      feedback.textContent = 'Code entered?, click submit!';
       codeSubmit.disabled = false;
       }
   });
